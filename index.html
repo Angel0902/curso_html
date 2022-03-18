@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"><meta>
+	<title>Manual de HTML y CSS</title>
+</head>
+<body>
+<script>
+/*function contarCarart(Cadena){
+	let lenCadena = Cadena.length;
+	console.log("La cedna tiene "+ lenCadena);
+}
+
+contarCarart("venezuela");
+
+const contarCar = (Cadena='') =>{console.log("La cedna tiene "+ Cadena.length);};
+contarCar("lima");
+
+
+function SubStr(Cadena,length){
+	let $strCadena = Cadena.substring(0,length);
+	console.log($strCadena);
+}
+
+SubStr("Venezuela",4);
+
+const subcadena = (Cadena ='',length=undefined)=>{console.log(Cadena.substring(0,length))}
+subcadena("Casas",2);
+
+
+function Explorar(Cadena,CarSep){
+	let ArregloSep = Cadena.split(CarSep);
+	console.log(ArregloSep);
+}
+
+Explorar("Mi casa es grande"," ");
+
+const explo = (Cadena='',CarSep='')=>{console.log(Cadena.split(CarSep))}
+explo("Las casas son bonitas"," ");
+function RepetirCadena(Cadena,Ciclo){
+	let CadenaAux = "";
+	for (let index = 0; index < Ciclo; index++) {
+		CadenaAux+= " " + Cadena;
+	}
+	console.log(CadenaAux);
+}
+
+RepetirCadena("Venezuela",2);
+
+const RepeatString = (Cadena='',Ciclo=0)=>{
+	let CadenaAux = "";
+	for (let index = 0; index < Ciclo; index++) {
+		CadenaAux+= " " + Cadena;
+	}
+	console.log(CadenaAux);
+}
+RepeatString("Maracaibo",5);*/
+
+const InvertirStrng = (Cadena) =>{
+	console.log(Cadena.split("").reverse().join(""));
+}
+InvertirStrng("Venezuela");
+
+const NumOcurrencias = (Cadena='',Ocurrencia='') =>{
+	console.log(Cadena.split(Ocurrencia).length);
+}
+NumOcurrencias("HOla Hola hola","Hola");
+
+const Palindromo = (Cadena) =>{
+	$StringInv = Cadena.split("").reverse().join("");
+	if(Cadena===$StringInv){
+		console.log("La cadena es un palindromo");
+	}else{
+		console.log("La cadena no es un palindromo");
+	}
+}
+
+Palindromo("salas");
+Palindromo("casas");
+const eliminasubcad = (Cadena='',SubCadena='')=>{
+	console.log(Cadena.replaceAll(SubCadena,""));
+}
+eliminasubcad("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+
+const copicua = (numero=0)=>{
+	if(typeof numero!=="number")return console.log(`El valor "${numero}" no es un numero`);
+}
+copicua("dfsdf");
+const contarVC = (Cadena='') =>{
+	let vocales=0,consonantes=0;
+	for (let letra of Cadena) {
+		if(/[aeiou]/.test(letra)){
+			vocales++;
+		}
+		if(/[bcdf]/.test(letra)){
+			consonantes++;	
+		}		
+	}
+	return console.info(Cadena,vocales,consonantes);
+}
+contarVC("la casa esta bella");
+
+const nombreValido = (Cadena) =>{
+	let expReg = /^[A-Za-z\s]+$/g.test(Cadena);
+	return (expReg)?console.info("El nombre ingreso es valido"):console.warn("El no mnre ingreso no es valido");
+}
+nombreValido("ANgel54325");
+
+const correoValido = (Cadena) =>{
+	let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(Cadena);
+	return (expReg)?console.info("El correo ingresado es valido"):console.warn("El correo ingresado no es valido");
+}
+correoValido("atencio.an@gmailcom");
+
+
+</script>
+</body>
+</html>
