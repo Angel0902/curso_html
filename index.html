@@ -111,7 +111,14 @@ const correoValido = (Cadena) =>{
 	return (expReg)?console.info("El correo ingresado es valido"):console.warn("El correo ingresado no es valido");
 }
 correoValido("atencio.an@gmailcom");
+correoValido("atencio_an@hotmailcom");
+correoValido("mailcom");
 
+const correoValidoDos = (Cadena) =>{
+	let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(Cadena);
+	return (expReg)?console.info("El correo ingresado es valido"):console.warn("El correo ingresado no es valido");
+}
+correoValidoDos("atencio.an@gmailcom");
 
 </script>
 </body>
